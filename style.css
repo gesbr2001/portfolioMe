@@ -21,7 +21,6 @@
 
 html {
   scroll-behavior: smooth;
-  /* compensa a navbar fixa em todos os alvos de âncora */
   scroll-padding-top: calc(var(--nav-h) + 16px);
 }
 
@@ -46,7 +45,6 @@ img { display: block; max-width: 100%; }
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
-  /* Fundo fosco inicial — levemente visível */
   background: rgba(7, 0, 36, 0.315);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -54,7 +52,7 @@ img { display: block; max-width: 100%; }
   transition: background 0.3s, border-color 0.3s;
 }
 
-/* Navbar fica mais opaca ao scrollar */
+
 #navbar.scrolled {
   background: rgba(7, 0, 36, 0.39);
   border-color: rgba(255,255,255,0.07);
@@ -103,7 +101,7 @@ img { display: block; max-width: 100%; }
 
 .link-animado:hover::after { width: calc(100% - 28px); }
 
-/* Botão CTA na nav */
+
 .nav-cta {
   background: var(--accent);
   color: #07002a !important;
@@ -682,7 +680,7 @@ footer {
 footer strong { color: var(--accent); }
 
 
-/* =============================================
+/* ===================================================
    RESPONSIVO — 1024px
    ============================================= */
 @media (max-width: 1024px) {
@@ -692,7 +690,7 @@ footer strong { color: var(--accent); }
   .eudiv2 { width: 260px; }
 }
 
-/* =============================================
+/* =================================================
    RESPONSIVO — 768px
    ============================================= */
 @media (max-width: 768px) {
@@ -753,7 +751,7 @@ footer strong { color: var(--accent); }
   .contato-grid { gap: 28px; }
 }
 
-/* =============================================
+/* ==================================================
    RESPONSIVO — 480px
    ============================================= */
 @media (max-width: 480px) {
@@ -781,7 +779,7 @@ footer strong { color: var(--accent); }
   footer { padding: 20px 16px; }
 }
 
-/* =============================================
+/* ===================================================
    RESPONSIVO — 360px
    ============================================= */
 @media (max-width: 360px) {
