@@ -1,152 +1,250 @@
 <!DOCTYPE html>
-<html lang="Pt-BR">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriel Estrela</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabriel Estrela — Dev Full Stack</title>
+  <link rel="stylesheet" href="style.css">
 
-    <!--PARTE DO FAVICON-->
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="favicon_io/site.webmanifest">
+  <!-- Fontes modernas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="favicon_io/site.webmanifest">
 </head>
+
 <body>
-    <nav>
-        <span class="logo">Gabriel Estrela<sub> dev</sub></span>
-        <a class="link-animado" href="#home">Home</a>
-        <a class="link-animado" href="#portfolio">Portfolio</a>
-        <a class="link-animado" href="#contato">Contato</a>
-    </nav>
-    
-    <header id="home">
-        <div class="fundo-animado">
-          <img class="imagem-fundo" src="assets/comet.png" alt="">
-          <img class="imagem-fundo" src="assets/foguetetriangulo.png" alt="">
-          <img class="imagem-fundo" src="assets/pen.png" alt="">
-        </div>
-      
-        <div class="conteudo">
-            <div class="img-container">
-                <img src="assets/me.png" alt="Gabriel Estrela" class="foto">
-            </div>
-          <p class="texto-header">
-            Me chamo <span class="gabriel-estrela">Gabriel Estrela</span><br>
-            Desenvolvedor <span class="front-end"></span> em ascensão.
-          </p>
-        </div>
-      </header>
-      
 
-      <section class="sobre-me">
-        <div class="section-fundo">
-          <img class="trianguloDois" src="assets/tri2.png" alt="">
-          <img class="trianguloTres" src="assets/trian1.png" alt="">
-        </div>
-      
-        <div class="conteudo2">
-          <p>
-            <br>
-            Sou formado em Análise e Desenvolvimento de Sistemas, com pós-graduação em Engenharia de Software.
-            Tenho mais de 4 anos de experiência em desenvolvimento web, atuando como dev <span style="background-color: #d9ff00; color: #190161;">front-end</span> e <span style="background-color: #d9ff00; color: #190161;">designer UI/UX.</span> 
-            Atualmente, trabalho como Analista de Sistemas e Suporte Técnico.
-            
-          </p>
-          <img src="assets/eudiv2.png" class="eudiv2" alt="Laptop Memoji" />
-        </div>
-      </section>
-      
-<section class="sectiondupla">
-  <img src="assets/trian1.png" class="float-img img1" alt="">
-  <img src="assets/trian2.png" class="float-img img2" alt="">
-  <img src="assets/trian2.png" class="float-img img3" alt="">
-  <img src="assets/trian1.png" class="float-img img4" alt="">
-  <img src="assets/trian2.png" class="float-img img5" alt="">
-  <img src="assets/trian1.png" class="float-img img6" alt="">
+  <!-- NAV FIXA -->
+  <nav id="navbar">
+    <span class="logo">GE<span class="logo-accent">.</span>dev</span>
+    <div class="nav-links">
+      <a class="link-animado" href="#home">Home</a>
+      <a class="link-animado" href="#sobre">Sobre</a>
+      <a class="link-animado" href="#skills">Skills</a>
+      <a class="link-animado" href="#portfolio">Portfolio</a>
+      <a class="link-animado nav-cta" href="#contato">Contato</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">&#9776;</button>
+  </nav>
 
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" onclick="fechaMenu()">Home</a>
+    <a href="#sobre" onclick="fechaMenu()">Sobre</a>
+    <a href="#skills" onclick="fechaMenu()">Skills</a>
+    <a href="#portfolio" onclick="fechaMenu()">Portfolio</a>
+    <a href="#contato" onclick="fechaMenu()">Contato</a>
+  </div>
 
+  <!-- HEADER / HERO -->
+  <header id="home">
+    <!-- Decorações flutuantes -->
+    <img class="deco deco-1" src="assets/comet.png" alt="">
+    <img class="deco deco-2" src="assets/foguetetriangulo.png" alt="">
+    <img class="deco deco-3" src="assets/pen.png" alt="">
 
-      <section class="skills">
-          <h2 class="section-title">Skills</h2>
-        <div class="skills-container">
-          <div class="skill-card">
-            <img src="skiils/css.png" alt="CSS">
-            <span>CSS</span>
-            <div class="tooltip">Básico</div>
-          </div>
-          <div class="skill-card">
-            <img src="skiils/html.png" alt="HTML">
-            <span>HTML</span>
-            <div class="tooltip">Básico</div>
-          </div>
-          <div class="skill-card">
-            <img src="skiils/javascript.png" alt="JavaScript">
-            <span>JavaScript</span>
-            <div class="tooltip">Básico</div>
-          </div>
-          <div class="skill-card">
-            <img src="skiils/react.png" alt="ReactJS">
-            <span>ReactJS</span>
-            <div class="tooltip">Básico</div>
-          </div>
-          <div class="skill-card">
-            <img src="skiils/node.png" alt="Node">
-            <span>Node.js</span>
-            <div class="tooltip">Básico</div>
-          </div>
+    <div class="hero-content">
+      <div class="img-container">
+        <img src="assets/me.png" alt="Gabriel Estrela" class="foto">
+      </div>
+      <div class="hero-text">
+        <p class="hero-greeting">Olá, eu sou</p>
+        <h1 class="hero-name">Gabriel<br><span class="accent-highlight">Estrela</span></h1>
+        <p class="hero-role">Desenvolvedor <span class="tag-role">Full Stack</span></p>
+        <p class="hero-sub">Transformo ideias em sistemas reais — funcionais, elegantes e eficientes.</p>
+        <div class="hero-ctas">
+          <a href="#portfolio" class="btn-primary">Ver projetos</a>
+          <a href="#contato" class="btn-ghost">Fale comigo</a>
         </div>
-      </section>
-      <!---PORTFOLIO-->
-      <section id="portfolio" class="portfolio">
-        <h2 class="section-title">Portfolio</h2>
-        <div class="portfolio-boxes">
-          
-          <a href="https://github.com/gesbr2001/gameShoot/blob/main/Jogo%20de%20tiro.html" target="_blank" class="portfolio-card">
-            <h3>Jogo de Tiro 2D</h3>
-            <p>Um simples jogo de tiro, usando JavaScript, HTML/CSS.</p>
-          </a>
-      
-          <a href="https://github.com/gesbr2001/tunel_vento" target="_blank" class="portfolio-card">
-            <h3>Tunel de Vento 2D</h3>
-            <p>Um jogo/teste de um tunel de vento em 2D.</p>
-          </a>
-      
-          <a href="https://github.com/gesbr2001/SGE" target="_blank" class="portfolio-card">
-            <h3>SGE - Web</h3>
-            <p>Sistema de Gerenciamento de Estoque com HTML/CSS e JAVASCRIPT.</p>
-          </a>
-      
-          <a href="https://github.com/gesbr2001/siteMizael.git" target="_blank" class="portfolio-card">
-            <h3>Landpage</h3>
-            <p>Landpage usando HTML/CSS, Javascript com Node e Express.</p>
-          </a>
-      
-        </div>
-      </section>
-    </section>
+      </div>
+    </div>
+  </header>
 
-      <section id="contato">
-        <img src="assets/rocket.png" class="float-element" alt="Elemento flutuante">
+  <!-- SOBRE MIM -->
+  <section id="sobre" class="sobre-me">
+    <div class="sobre-inner">
+      <div class="sobre-img-wrap">
+        <img src="assets/eudiv2.png" class="eudiv2" alt="Laptop Memoji" />
+      </div>
+      <div class="sobre-texto">
+        <span class="section-label">Sobre mim</span>
+        <h2 class="section-title">Quem está por trás do código?</h2>
+        <p>
+          Sou formado em <strong>Análise e Desenvolvimento de Sistemas</strong> com pós-graduação em
+          <strong>Engenharia de Software</strong>. Tenho mais de 4 anos de experiência em desenvolvimento web,
+          atuando como desenvolvedor <mark>Front-End</mark> e <mark>Designer UI/UX</mark>.
+        </p>
+        <p>
+          Atualmente trabalho como <strong>Analista de Sistemas e Suporte Técnico</strong>, sempre buscando
+          entregar soluções que unam performance, usabilidade e bom design.
+        </p>
+      </div>
+    </div>
+  </section>
 
-        <h2 class="section-title">Contato</h2>
-        <div class="contact-box">
-          <div class="contact-icons">
-            <a href="https://instagram.com/gabrielestrelaa_" target="_blank"><img src="socialMedia/Instagram.png" alt="Instagram"></a>
-            <a href="https://www.linkedin.com/in/gabriel-estrela/" target="_blank"><img src="socialMedia/LinkedIn.png" alt="LinkedIn"></a>
-            <a href="https://github.com/gesbr2001" target="_blank"><img src="socialMedia/GitHub.png" alt="GitHub"></a>
-            <a href="https://wa.me/+5583996353723" target="_blank"><img src="socialMedia/WhatsApp.png" alt="WhatsApp"></a>
+  <!-- SKILLS -->
+  <section id="skills" class="skills">
+    <span class="section-label">Tecnologias</span>
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-container">
+
+      <div class="skill-card">
+        <img src="skiils/php.png" alt="PHP">
+        <span>PHP</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="skiils/ci.png" alt="CodeIgniter">
+        <span>CodeIgniter</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="skiils/bd.png" alt="MySQL">
+        <span>MySQL</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="skiils/css.png" alt="CSS">
+        <span>CSS</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="skiils/html.png" alt="HTML">
+        <span>HTML</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="skiils/javascript.png" alt="JavaScript">
+        <span>JavaScript</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="skiils/node.png" alt="Node.js">
+        <span>Node.js</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="portfolio">
+    <span class="section-label">Projetos</span>
+    <h2 class="section-title">Portfolio</h2>
+    <div class="portfolio-boxes">
+
+      <a href="https://github.com/gesbr2001/gameShoot/blob/main/Jogo%20de%20tiro.html" target="_blank" class="portfolio-card">
+        <div class="card-tag">JavaScript · HTML/CSS</div>
+        <h3>Jogo de Tiro 2D</h3>
+        <p>Um jogo de tiro construído do zero com canvas e JavaScript puro.</p>
+        <span class="card-link">Ver projeto →</span>
+      </a>
+
+      <a href="https://github.com/gesbr2001/tunel_vento" target="_blank" class="portfolio-card">
+        <div class="card-tag">Simulação · 2D</div>
+        <h3>Túnel de Vento 2D</h3>
+        <p>Simulação interativa de dinâmica de fluidos em ambiente 2D.</p>
+        <span class="card-link">Ver projeto →</span>
+      </a>
+
+      <a href="https://github.com/gesbr2001/SGE" target="_blank" class="portfolio-card">
+        <div class="card-tag">HTML · CSS · JavaScript</div>
+        <h3>SGE — Web</h3>
+        <p>Sistema de Gerenciamento de Estoque completo para web.</p>
+        <span class="card-link">Ver projeto →</span>
+      </a>
+
+      <a href="https://github.com/gesbr2001/siteMizael.git" target="_blank" class="portfolio-card">
+        <div class="card-tag">Node · Express</div>
+        <h3>Landing Page</h3>
+        <p>Landing page moderna com back-end em Node.js e Express.</p>
+        <span class="card-link">Ver projeto →</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="contato">
+    <span class="section-label">Vamos conversar?</span>
+    <h2 class="section-title">Entre em contato</h2>
+    <p class="contato-sub">Aberto a projetos freelance, oportunidades e parcerias. Mande uma mensagem!</p>
+
+    <div class="contato-grid">
+
+      <div class="contato-social">
+        <a href="https://instagram.com/gabrielestrelaa_" target="_blank" class="social-item">
+          <img src="socialMedia/Instagram.png" alt="Instagram">
+          <div>
+            <span class="social-name">Instagram</span>
+            <span class="social-handle">@gabrielestrelaa_</span>
           </div>
-          <a href="mailto:gabrielestrela2121@gmail.com?subject=Contato%20via%20portfólio&body=Olá%20Gabriel%2C%20gostaria%20de%20falar%20sobre..." class="send-email">
-            <img src="socialMedia/Email.png" alt="Email Icon">
-            <span>Send email</span>
-          </a>
-        </div>
-      </section>
-      <footer class="footer">
-        <p>Desenvolvido por Gabriel Estrela</p>
-      </footer>
+        </a>
+        <a href="https://www.linkedin.com/in/gabriel-estrela/" target="_blank" class="social-item">
+          <img src="socialMedia/LinkedIn.png" alt="LinkedIn">
+          <div>
+            <span class="social-name">LinkedIn</span>
+            <span class="social-handle">gabriel-estrela</span>
+          </div>
+        </a>
+        <a href="https://github.com/gesbr2001" target="_blank" class="social-item">
+          <img src="socialMedia/GitHub.png" alt="GitHub">
+          <div>
+            <span class="social-name">GitHub</span>
+            <span class="social-handle">gesbr2001</span>
+          </div>
+        </a>
+        <a href="https://wa.me/+5583996353723" target="_blank" class="social-item">
+          <img src="socialMedia/WhatsApp.png" alt="WhatsApp">
+          <div>
+            <span class="social-name">WhatsApp</span>
+            <span class="social-handle">+55 83 9 9635-3723</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="contato-email-wrap">
+        <p class="email-label">Prefere e-mail?</p>
+        <a href="mailto:gabrielestrela2121@gmail.com?subject=Contato%20via%20portfólio&body=Olá%20Gabriel%2C%20gostaria%20de%20falar%20sobre..."
+          class="email-btn">
+          <img src="socialMedia/Email.png" alt="Email">
+          gabrielestrela2121@gmail.com
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>Desenvolvido por <strong>Gabriel Estrela</strong> · 2025</p>
+  </footer>
+
+  <script>
+    // Menu mobile
+    const toggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('mobileMenu');
+    toggle.addEventListener('click', () => menu.classList.toggle('open'));
+    function fechaMenu() { menu.classList.remove('open'); }
+
+    // Fecha menu ao clicar fora
+    document.addEventListener('click', (e) => {
+      if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+        menu.classList.remove('open');
+      }
+    });
+
+    // Navbar muda ao scrollar
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
+    });
+  </script>
+
 </body>
 </html>
