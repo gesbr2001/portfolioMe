@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Gabriel Estrela.dev</title>
+  <meta name="description" content="Artigos de Gabriel Estrela sobre desenvolvimento web, PHP, JavaScript, sistemas internos e carreira em tecnologia.">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x 16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon_io/favicon192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon_io/favicon512x512.png">
+</head>
+
+<body class="blog-area">
+  <nav id="navbar" class="blog-navbar">
+    <a href="index.html" class="logo">Gabriel Estrela.dev</a>
+  </nav>
+
+  <a class="botao-lateral-index" id="botaoLateral-index" href="index.html" aria-label="Abrir pagina do portfolio" title="Portfolio">
+    <span>Portfolio</span>
+  </a>
+
+  <main>
+    <section class="section blog-hero">
+      <span class="section-label">Blog</span>
+      <h1>Artigos sobre Tecnologias</h1>
+      <p>
+        Conteúdos sobre desenvolvimento web, programação e carreira em tecnologia.
+      </p>
+    </section>
+
+    <section class="section section-alt">
+      <div class="section-head">
+        <span class="section-label">Artigos</span>
+        <h2>Publicações recentes</h2>
+      </div>
+
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-card-meta">
+            <span>Desenvolvimento</span>
+            <time datetime="2026-06-30">30/06/2026</time>
+          </div>
+          <h3>Como organizo um projeto web simples</h3>
+          <p>
+            Estrutura basica para manter HTML, CSS, imagens e paginas internas sem transformar o projeto em algo pesado.
+          </p>
+          <a href="blog/como-organizo-um-projeto-web-simples.html" class="project-link">Ler artigo</a>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card-meta">
+            <span>Carreira</span>
+            <time datetime="2026-06-30">30/06/2026</time>
+          </div>
+          <h3>Por que manter um blog tecnico no portfolio</h3>
+          <p>
+            Um blog ajuda a mostrar raciocinio, documentar conhecimento e deixar o portfolio mais forte para oportunidades.
+          </p>
+          <a href="blog/por-que-manter-um-blog-tecnico-no-portfolio.html" class="project-link">Ler artigo</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Gabriel Estrela. Desenvolvedor Full Stack.</p>
+    <p id="footerYear"></p>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    const footerYear = document.getElementById('footerYear');
+
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 24);
+    });
+
+    footerYear.textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>

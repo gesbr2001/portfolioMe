@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como organizo um projeto web simples | Blog Gabriel Estrela</title>
+  <meta name="description" content="Estrutura simples para organizar projetos web manuais com HTML, CSS, imagens e paginas internas.">
+  <link rel="stylesheet" href="../style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x 16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon_io/favicon192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../favicon_io/favicon512x512.png">
+</head>
+
+<body class="blog-area">
+  <nav id="navbar" class="blog-navbar">
+    <a href="../index.html" class="logo">Gabriel Estrela.dev</a>
+  </nav>
+
+  <a class="botao-lateral-index" id="botaoLateral-index" href="../index.html" aria-label="Abrir pagina do portfolio" title="Portfolio">
+    <span>Portfolio</span>
+  </a>
+
+  <main>
+    <article class="post">
+      <a href="../blog.html" class="post-back">Voltar para o blog</a>
+
+      <header class="post-header">
+        <span class="section-label">Desenvolvimento</span>
+        <h1>Como organizo um projeto web simples</h1>
+        <p>
+          Para um portfolio ou blog pequeno, uma estrutura manual com HTML e CSS pode ser suficiente, rapida e facil de manter.
+        </p>
+        <time datetime="2026-06-30">30/06/2026</time>
+      </header>
+
+      <div class="post-content">
+        <p>
+          Nem todo projeto precisa comecar com framework, banco de dados ou painel administrativo. Quando o objetivo e publicar paginas estaticas com bom visual e boa leitura, HTML por pagina pode resolver muito bem.
+        </p>
+
+        <h2>Estrutura basica</h2>
+        <p>
+          Uma organizacao simples separa a pagina principal, a listagem do blog, os artigos e os arquivos compartilhados.
+        </p>
+
+        <pre><code>/index.html
+/blog.html
+/blog/
+  meu-artigo.html
+/assets/
+/style.css</code></pre>
+
+        <h2>Por que funciona</h2>
+        <p>
+          Essa estrutura e direta, leve para hospedar e boa para SEO. Cada artigo tem sua propria URL, titulo, descricao e conteudo independente.
+        </p>
+
+        <h2>Quando evoluir</h2>
+        <p>
+          Se o blog crescer muito, ai vale pensar em Markdown, gerador estatico ou algum CMS. Para comecar, o manual entrega mais rapido e evita complexidade desnecessaria.
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>Gabriel Estrela. Desenvolvedor Full Stack.</p>
+    <p id="footerYear"></p>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    const footerYear = document.getElementById('footerYear');
+
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 24);
+    });
+
+    footerYear.textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Por que manter um blog tecnico no portfolio | Blog Gabriel Estrela</title>
+  <meta name="description" content="Como um blog tecnico pode fortalecer um portfolio de desenvolvedor e mostrar raciocinio profissional.">
+  <link rel="stylesheet" href="../style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x 16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon_io/favicon192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../favicon_io/favicon512x512.png">
+</head>
+
+<body class="blog-area">
+  <nav id="navbar" class="blog-navbar">
+    <a href="../index.html" class="logo">Gabriel Estrela.dev</a>
+  </nav>
+
+  <a class="botao-lateral-index" id="botaoLateral-index" href="../index.html" aria-label="Abrir pagina do portfolio" title="Portfolio">
+    <span>Portfolio</span>
+  </a>
+
+  <main>
+    <article class="post">
+      <a href="../blog.html" class="post-back">Voltar para o blog</a>
+
+      <header class="post-header">
+        <span class="section-label">Carreira</span>
+        <h1>Por que manter um blog tecnico no portfolio</h1>
+        <p>
+          Um portfolio mostra o que foi feito. Um blog ajuda a mostrar como voce pensa, decide e resolve problemas.
+        </p>
+        <time datetime="2026-06-30">30/06/2026</time>
+      </header>
+
+      <div class="post-content">
+        <p>
+          Para quem trabalha com desenvolvimento, escrever sobre solucoes tecnicas e uma forma simples de registrar conhecimento e demonstrar clareza.
+        </p>
+
+        <h2>Mostra raciocinio</h2>
+        <p>
+          Um artigo pode explicar por que uma abordagem foi escolhida, quais problemas apareceram e como a solucao foi organizada.
+        </p>
+
+        <h2>Ajuda no SEO</h2>
+        <p>
+          Cada artigo vira uma pagina indexavel, com titulo e descricao proprios. Isso aumenta as chances de pessoas encontrarem seu trabalho.
+        </p>
+
+        <h2>Cria autoridade</h2>
+        <p>
+          Conteudos sobre PHP, JavaScript, banco de dados, sistemas internos e manutencao mostram experiencia aplicada, nao apenas uma lista de tecnologias.
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>Gabriel Estrela. Desenvolvedor Full Stack.</p>
+    <p id="footerYear"></p>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    const footerYear = document.getElementById('footerYear');
+
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 24);
+    });
+
+    footerYear.textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
